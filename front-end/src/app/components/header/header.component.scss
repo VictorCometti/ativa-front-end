@@ -1,0 +1,29 @@
+header{
+    background-color: #F8BF29;
+    width: 100vw;
+    height: 10vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    -webkit-box-shadow: inset 0px 0px 10px 0px #0000000f;
+    -moz-box-shadow: inset 0px 0px 10px 0px #0000000f;
+    box-shadow: inset 0px 0px 10px 0px #0000000f;
+
+    img{
+        height: 100%;
+        
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 768px) {
+    header img {
+        height: 80%;
+        max-height: 60px;
+        max-width: 100px;
+    }
+}
