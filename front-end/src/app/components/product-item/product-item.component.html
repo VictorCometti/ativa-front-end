@@ -1,0 +1,15 @@
+<div class="item">
+        <div class="image-container">
+            <img [src]="imageUrl()" alt="product-image">
+        </div>
+        <div class="item-footer">
+            <div class="description">
+                <span class="item-model">{{model()}}</span>
+                <span>{{description()}}</span>    
+            </div>
+            <div class="item-buttons">
+                <app-item-button [buttonName]="infoButton"></app-item-button>
+                <app-item-button [buttonName]="budgetButton"></app-item-button>
+            </div>
+        </div>
+</div>

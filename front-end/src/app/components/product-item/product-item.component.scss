@@ -1,0 +1,151 @@
+:host {
+  height: 461px;
+  width: 400px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.44);
+  display: block;
+  overflow-x: hidden;
+
+
+  .item {
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+
+    .image-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 250px;
+        cursor: crosshair;
+        transition: transform 0.5s ease;
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 0;
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        background: #ffffff36;
+        border-radius: 100%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: width 0.3s, height 0.3s, opacity 0.3s;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.3);
+        }
+
+        &::before {
+          width: 300%;
+          height: 300%;
+          opacity: 1;
+        }
+      }
+    }
+
+    .item-footer {
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      width: 100%;
+      z-index: 2;
+      -webkit-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.36);
+      -moz-box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.36);
+      box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.36);
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .item-model {
+          font-size: 1rem;
+          font-weight: 600;
+        }
+
+        span {
+          text-shadow: 2px 2px #00000013;
+          color: #666;
+          font-size: 0.8rem;
+        }
+      }
+
+      .item-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+@media (max-height: 768px) {
+  :host {
+    width: 150px;
+    height: 300px;
+
+    .item {
+      height: 100%;
+      display: grid;
+      grid-template-rows: repate(2, 1fr);
+
+      .image-container {
+        width: 150px;
+
+        img {
+          width: 150px;
+        }
+      }
+
+      .item-footer {
+      
+        width: 150px;
+        .description{
+          display: flex;
+          justify-content: space-around;
+          width: 150px;
+          span{
+            font-size: 0.6rem;
+            text-align: center;
+          }
+          .item-model{
+            font-size: 0.8rem;
+          }
+        }
+        
+      }
+    }
+
+    .item-content {
+
+      .description {
+        .item-model {
+          font-weight: 600;
+        }
+
+        .item-model {
+          font-size: 1.0rem;
+        }
+
+        span {
+          font-size: 0.6rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
