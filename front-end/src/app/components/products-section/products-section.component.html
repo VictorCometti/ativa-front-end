@@ -1,0 +1,16 @@
+<div class="products-info">
+    <span class="info">Produtos</span>
+    <span class="sub-info">Todos os nossos produtos.</span>
+</div>
+<section>
+    @for(product of visibleProducts; track product.id){
+    <app-product-item 
+    [@fadeIn] 
+    [description]="product.description" 
+    [imageUrl]="product.image" 
+    [model]="product.model">
+    </app-product-item>
+
+    }
+
+</section>

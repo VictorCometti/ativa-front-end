@@ -1,0 +1,47 @@
+:host{
+    overflow-x: hidden;
+
+    background-color: #F2F2F2;
+    
+    .products-info{
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #6666666b;
+        overflow-x: hidden;
+        span{
+            margin-left: 10px;
+        }
+
+        .info{
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .sub-info{
+            color:#666;
+            font-size: 0.8rem;
+        }
+    }
+    section{
+        margin: 10px 0 10px 0px;
+        display: grid;
+        grid-template-columns: repeat(3, 400px);
+        gap: 32px;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+
+    }
+}
+@media(max-width: 768px){
+    :host{
+        section{
+            display: grid;
+            grid-template-columns: repeat(2, 150px);
+            gap: 32px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
+}
