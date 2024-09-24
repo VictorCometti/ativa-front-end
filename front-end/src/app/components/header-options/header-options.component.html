@@ -1,7 +1,9 @@
-<ul >
-    @for(option of menuOptions; track option.name) {
-        <li >
-            <a href="#">{{option.name}} <i [class]="option.icon"></i></a>
-        </li>
-    }
-</ul>
+<nav>
+    <ul >
+        @for(option of menuOptions; track option.name) {
+            <li >
+                <a href="#">{{option.name}} <i [class]="option.icon"></i></a>
+            </li>
+        }
+    </ul>
+</nav>
