@@ -1,0 +1,23 @@
+button {
+    border: 0;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.568);
+    font-size: 0.8rem;
+    color: #F4F3F2;
+    max-height: 50px;
+    min-height: 50px;
+    max-width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: #169D0D;
+
+    i {
+        font-size: 2rem;
+    }
+}
