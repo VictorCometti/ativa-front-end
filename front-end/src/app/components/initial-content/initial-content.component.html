@@ -1,34 +1,23 @@
-<section>
-
+<section >
     <img class="security-image" src="./security-image.jpg" alt="Imagem de segurança">
     <div class="description">
 
         <div class="icon-div" @slideIn>
-            <img src="./logo-sem-escrita.png" alt="">
+            <img class="" src="./logo-sem-escrita.png" alt="logo">
             <h1>AMPLAVISÃO</h1>
         </div>
 
-        <h1 @slideIn>SEGURANÇA TOTAL<br>PROTEGENDO O QUE É SEU.</h1>
         <h2 @slideInDelay>Explore nossas soluções integradas de segurança<br> projetadas para atender às suas
             necessidades.</h2>
         <h2 @slideInDelay>Com tecnologia de ponta e estratégias personalizadas<br> garantimos a proteção do seu espaço e
             de todos.</h2>
-        <button
-        [@slideInButton]="buttonState" 
-        [@hoverGrow]="hoverState" 
-        (mouseenter)="onMouseEnter()"
-        (mouseleave)="onMouseLeave()"
-        type="button" class="budget-button"> 
-        
-
-            SOLICITE SEU <br>ORÇAMENTO
-
-            </button>
+        <button (click)="scrollService.scrollToSection('budget-section')" @slideIn type="button" class="budget-button">
+            SOLICITE SEU ORÇAMENTO
+        </button>
 
     </div>
     <div class="buttons">
-        <button type="button" class="down-button"><i class="fa-solid fa-chevron-down"></i></button>
-
+        <app-down-button [downPage]="'client-section'"></app-down-button>
     </div>
 
 </section>
