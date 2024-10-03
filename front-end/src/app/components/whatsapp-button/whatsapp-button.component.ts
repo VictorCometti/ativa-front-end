@@ -1,5 +1,5 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
+import { growUpAnimation } from '../../animations/grow-up';
 
 @Component({
   selector: 'app-whatsapp-button',
@@ -8,15 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './whatsapp-button.component.html',
   styleUrl: './whatsapp-button.component.scss',
   animations: [
-    trigger('growUp', [
-      state('normal', style({
-        transform: 'scale(1)',
-      })),
-      state('hover', style({
-        transform: 'scale(1.1)',
-      })),
-      transition('normal <=> hover', animate('300ms ease'))
-    ])
+    growUpAnimation
   ]
 })
 export class WhatsappButtonComponent {

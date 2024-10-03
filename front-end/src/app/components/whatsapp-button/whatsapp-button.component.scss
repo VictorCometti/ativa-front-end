@@ -21,3 +21,24 @@ button {
         font-size: 2rem;
     }
 }
+
+@media(max-height: 932px) {
+    button {
+        border: 0;
+        padding: 10px 30px 10px 30px;
+        cursor: pointer;
+        border-radius: 25px;
+        font-weight: 600;
+        max-height: 40px;
+        min-height: 40px;
+        max-width: 50px;
+        min-width: 50px;
+
+        i {
+            font-size: 1.4rem;
+
+        }
+
+    }
+
+}
