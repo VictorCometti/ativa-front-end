@@ -1,0 +1,22 @@
+<form id="budget-section" [formGroup]="form" action role="document">
+    @if(haveCategory()){
+        <app-form-input [class]="'nomeDaCategoria'" [id]="'nomeDaCategoria'" [form]="form"
+        [formControlName]="'nomeDaCategoria'" [type]="'text'" [label]="'SERVIÇO'"
+        [placeholder]="'Serviço..'" [isReadOnly]="true" [validationMessage]="''">
+    </app-form-input>
+    }
+    @for(field of formFields; track field.id){
+    <app-form-input 
+        [isReadOnly]="false" 
+        [class]="field.formControlName" 
+        [id]="field.id" 
+        [form]="form"
+        [formControlName]="field.formControlName" 
+        [type]="field.type" [label]="field.label"
+        [placeholder]="field.placeholder" 
+        [validationMessage]="field.validationMessage">
+    </app-form-input>
+    }
+
+    <app-form-button class="button"></app-form-button>
+</form>
