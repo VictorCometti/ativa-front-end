@@ -1,0 +1,87 @@
+button {
+    overflow: hidden;
+    grid-column: 2;
+    justify-self: end;
+    align-self: flex-end;
+    margin-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    border: 0;
+    height: 50px;
+    width: 140px;
+    background-color: #F8BF29;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    transition: all 0.2s linear;
+    font-weight: 600;
+    font-size: 1rem;
+
+
+    &:hover {
+        background-color: #dfab29;
+    }
+
+    &:before {
+        font-size: 1rem;
+        content: "\f00c";
+        font-family: FontAwesome;
+        font-size: 1rem;
+        font-weight: 600;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        height: 100%;
+        width: 40px;
+        transition: all 0.2s linear;
+    }
+
+    &:hover {
+        text-indent: -35px;
+
+        &:before {
+            opacity: 1;
+            right: -15px;
+        }
+    }
+}
+@media(max-height: 932px){
+    button {
+        overflow: hidden;
+        grid-column: 2;
+        justify-self: end;
+        align-self: flex-end;
+        margin-bottom: 10px;
+        position: relative;
+        cursor: pointer;
+        border: 0;
+        height: 45px;
+        width: 90px;
+        background-color: #F8BF29;
+        font-weight: 600;
+        font-size: 0.8rem;
+    
+    
+        &:hover {
+            background-color: #dfab29;
+        }
+    
+        &:before {
+            font-size: 0.8rem;
+        }
+    
+        &:hover {
+            text-indent: -20px;
+    
+            &:before {
+                opacity: 1;
+                right: -10px;
+            }
+        }
+    }
+}
