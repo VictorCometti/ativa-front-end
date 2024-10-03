@@ -1,0 +1,15 @@
+<label [ngClass]="{'is-invalid': form().get(formControlName())?.invalid && form().get(formControlName())?.touched}"
+    [attr.for]="id()">
+    {{ label() }}
+</label>
+
+<select #inputSelect [ngClass]="{'is-invalid': form().get(formControlName())?.invalid && form().get(formControlName())?.touched}"
+    [name]="id()" [id]="id()">
+    @for(option of dropDownOptions(); track option.id){
+    <option [id]="option.id">{{option.value}}</option>
+    }
+</select>
+
+@if(form().get(formControlName())?.invalid && form().get(formControlName())?.touched){
+<app-invalid-feedback [validationMessage]="validationMessage()"></app-invalid-feedback>
+}

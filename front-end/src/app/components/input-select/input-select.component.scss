@@ -1,0 +1,48 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 91px;
+    width: 300px;
+
+    label {
+        display: flex;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #727272;
+        text-align: start;
+        text-shadow: 0 2px 8px #00000022;
+
+        &.is-invalid {
+            color: #ff4b4b;
+        }
+    }
+
+    select {
+        border: 1px solid #7b7b7b;
+        width: 100%;
+        padding: 5px;
+        border-radius: 6px;
+        font-size: 1rem;
+        text-align: start;
+
+        &:focus {
+            outline: 1px solid #3d4348;
+        }
+
+        &.is-invalid {
+            border: 2px solid #ff1414;
+            background-color: #ff5050;
+            color: #ff4b4b;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder {
+                color: #ff1414;
+            }
+        }
+    }
+
+
+}
