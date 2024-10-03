@@ -10,6 +10,7 @@ import { Component, input, output } from '@angular/core';
 export class ItemButtonComponent {
   public click = output<void>();
   public buttonName = input.required<string>();
+
   protected buttonClick() {
     this.click.emit();
   }
