@@ -1,0 +1,26 @@
+<section id="client-section" class="section">
+    <div class="description">
+        <h1 [@slideIn]>CLIENTES <BR> AMPLAVISÃO</h1>
+        <p [@slideIn]>
+            Temos o orgulho de atender uma variedade de empresas líderes de mercado, oferecendo produtos no rumo de
+            segurança que atendem às
+            suas necessidades específicas.
+
+        </p>
+        <p [@slideIn]>
+            Nossas parcerias são baseadas na confiança e na excelência, e estamos comprometidos em
+            fornecer soluções que possam garantir que nossos clientes alcançem seus objetivos.
+        </p>
+    </div>
+
+    <div class="logos">
+        @for(client of amplavisaoClients; track client.id){
+        <app-client-item  [clienteImage]="client.image"></app-client-item>
+        }
+    </div>
+
+    <div class="buttons">
+        <app-down-button [downPage]="'product-section'"></app-down-button>
+    </div>
+
+</section>
