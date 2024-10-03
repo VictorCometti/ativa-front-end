@@ -17,10 +17,22 @@ export const CUSTOM_CONROL_VALUE_ACCESSOR: any = {
   providers: [CUSTOM_CONROL_VALUE_ACCESSOR]
 
 })
-export class SearchInputComponent implements OnInit, ControlValueAccessor{
+export class SearchInputComponent implements OnInit, ControlValueAccessor {
   @ViewChild('inputElement') inputElement!: ElementRef<HTMLInputElement>;
 
-  public placeholder = input.required<string>();
+  dropdownOpen = false;
+  selectedCategory: string = 'TODOS';
+  placeholderText: string = 'Pesquisar...';
+
+  selectCategory(category: string) {
+    this.selectedCategory = category;
+    this.placeholderText = `${category}..`;
+    this.dropdownOpen = false;
+  }
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
 
   public label = input.required<string>();
 
@@ -37,7 +49,7 @@ export class SearchInputComponent implements OnInit, ControlValueAccessor{
   ngOnInit(): void {
     this.formControl = this.form().get(this.formControlName())
   }
-  
+
   writeValue(value: any): void {
     if (this.inputElement && this.inputElement.nativeElement) {
       this.form().get(this.formControlName())?.setValue(value);

@@ -1,4 +1,23 @@
-<button class="filter-button">TODOS <i class="fa-solid fa-caret-down"></i></button>
-<input type="search" id="search-input" [placeholder]="placeholder()">
-<button class= "search-button" type="submit" (click)="onInputChange($event)"><i class="fa-solid fa-magnifying-glass"></i></button>
+<div class="filter-container" style="position: relative;">
+    <button (click)="toggleDropdown()" class="filter-button">
+        TODOS <i class="fa-solid fa-caret-down"></i>
+    </button>
 
+    <nav *ngIf="dropdownOpen">
+        <ul>
+            <li (click)="selectCategory('RELÓGIO DE PONTO')">RELÓGIO DE PONTO</li>
+            <li (click)="selectCategory('BASTÃO DE RONDA')">BASTÃO DE RONDA</li>
+            <li (click)="selectCategory('ALARMES')">ALARMES</li>
+            <li (click)="selectCategory('SEMÁFOROS')">SEMÁFOROS</li>
+            <li (click)="selectCategory('PABAX')">PABAX</li>
+            <li (click)="selectCategory('INTERFONE')">INTERFONE</li>
+
+            <li (click)="selectCategory('SENSORES DE REDES')">SENSORES DE REDE</li>
+        </ul>
+    </nav>
+
+    <input type="search" id="search-input" [placeholder]="placeholderText">
+    <button class="search-button" type="submit" (click)="onInputChange($event)">
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+</div>
