@@ -1,0 +1,13 @@
+<div (click)="this.aboutItem()" class="item">
+    <div class="image-container">
+        <img [src]="category().imageUrl" alt="category-image">
+    </div>
+    <div class="item-footer">
+        <div class="description">
+            <span class="item-model">{{category().categoryName}}</span>
+        </div>
+        <div class="item-buttons">
+            <app-item-button [buttonName]="buttonName"></app-item-button>
+        </div>
+    </div>
+</div>
