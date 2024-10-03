@@ -1,0 +1,91 @@
+<footer id="about-section" class="section">
+    <div class="about">
+        <h1>VEJA POR QUE SOMOS <BR> REFERÊNCIA EM PROTEÇÃO E SEGURANÇA</h1>
+        <div>
+            <i class="fa-solid fa-calendar-check"></i>
+            <h2>Agilidade no Atendimento</h2>
+            <h3>Nosso compromisso com a agilidade no atendimento garante que suas necessidades de segurança sejam
+                atendidas de forma rápida e eficiente, proporcionando a você a tranquilidade.
+            </h3>
+        </div>
+        <div>
+            <i class="fa-solid fa-shield"></i>
+            <h2>Segurança e Confiabilidade</h2>
+            <h3>Ao escolher nossos serviços, você opta por um parceiro confiável, que prioriza a segurança de sua
+                propriedade e da sua família, utilizando tecnologias avançadas que garantem proteção inigualável.</h3>
+        </div>
+        <div>
+            <i class="fa-solid fa-cubes"></i>
+            <h2>Melhores <br> Produtos</h2>
+            <h3>Trabalhamos com os melhores produtos do mercado, oferecendo soluções de vigilância que não apenas
+                atendem, mas superam suas expectativas em qualidade e desempenho.</h3>
+        </div>
+    </div>
+    @if(isHomePage()){
+        <app-announce (isClicked)="navigateToBudget()"></app-announce>
+    }
+
+    <div class="infos">
+        <h1 class="copyright-tittle">COPYRIGHT</h1>
+        <div class="copyright">
+            <img src="./logo-sem-escrita.png" alt="">
+            <span>AMPLAVISÃO 2024 ©</span>
+        </div>
+        <h1 class="contact-tittle">CONTATOS</h1>
+        <div class="contact">
+            <div class="field">
+                <span class="value">comercial&#64;amplavisao.net</span>
+            </div>
+            <div class="field">
+                <span class="value">projetos&#64;amplavisao.net</span>
+            </div>
+            <div class="field">
+                <span class="value">sac&#64;amplavisao.net</span>
+            </div>
+            <div class="field">
+                <span class="value">(71) 3357-1515</span>
+            </div>
+
+        </div>
+
+
+        <h1 class="address-tittle">ENDEREÇO</h1>
+        <div class="address">
+            <div class="field">
+                <span>Rua Pinheiro Viegas Brotas</span>
+            </div>
+
+            <div class="field">
+                <span>Numero 106 - Sala 2</span>
+            </div>
+
+            <div class="field">
+                <span>CEP 40.283-600</span>
+            </div>
+            <div class="field">
+                <span>Salvador - BA</span>
+            </div>
+        </div>
+
+
+        <h1 class="about-us-tittle">SOBRE NÓS</h1>
+        <div class="about-us">
+            <div class="field">
+                <span (click)="navigateToBudget()">SOLICITAR <br> ORÇAMENTO</span>
+            </div>
+            <div  class="field">
+                <span (click)="navigateToProducts()">NOSSOS <br> PRODUTOS</span>
+            </div>
+            <div  class="field">
+                <span (click)="navigateToClient()">NOSSOS<br> CLIENTES</span>
+            </div>
+
+            <div  class="field">
+                <SPAN (click)="openWhatsapp()">WHATSAPP</SPAN>
+            </div>
+
+        </div>
+
+
+    </div>
+</footer>
