@@ -1,0 +1,22 @@
+<section id="product-section" class="section" #section>
+    <button class="slide-btn left-btn" (click)="goPrev()">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    @if(isVisible){
+    <h1 [@slideIn]>Explore nossas soluções em segurança <br> Projetadas para proteger o que é mais importante para você.
+    </h1>
+
+    <div class="carousel-items" #carouselItems>
+        @for(category of displayedCategories; track category.categoryName){
+        <app-category-item (categoryOutPut)="openCategory($event)" [category]="category" [class]="category.categoryName"
+            [@itemAnimation]>
+        </app-category-item>
+        }
+    </div>
+    }
+
+
+    <button class="slide-btn right-btn" (click)="goNext()">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</section>
