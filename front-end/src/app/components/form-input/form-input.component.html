@@ -1,18 +1,14 @@
-<label [ngClass]="{'is-invalid': form().get(formControlName())?.invalid && form().get(formControlName())?.touched}"
-  [attr.for]="id()">
-  {{ label() }}
-</label>
-
-<input 
-  [ngClass]="{'is-invalid': form().get(formControlName())?.invalid && form().get(formControlName())?.touched}"
-  [id]="id()" 
-  [type]="type()" 
-  [placeholder]="placeholder()" 
-  (input)="onInputChange($event)"
-  [value]="form().get(formControlName())?.value"
-  [maxLength]="maxLength"
-  />
-
+<label [attr.for]="id()">{{ label() }}</label>
+<input
+ [readonly]="isReadOnly()"
+ [ngClass]="{'is-invalid': form().get(formControlName())?.invalid && form().get(formControlName())?.touched}" 
+ [id]="id()" 
+ [type]="type()" 
+ [placeholder]="placeholder()" 
+ [value]="value"
+ (input)="onInputChange($event)"
+ [maxLength]="maxLength"
+ />
 @if(form().get(formControlName())?.invalid && form().get(formControlName())?.touched){
-    <app-invalid-feedback [validationMessage]="validationMessage()" ></app-invalid-feedback>
+<app-invalid-feedback [validationMessage]="validationMessage()"></app-invalid-feedback>
 }
