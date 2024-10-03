@@ -2,5 +2,17 @@
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-
+    margin: 0;
+    padding: 0;
+    background-color: #F4F3F2;
+}
+@media(max-height: 932px){
+    :host{
+        width: 100dvw;
+        height: 100dvh;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        background-color: #F4F3F2;
+    }
 }

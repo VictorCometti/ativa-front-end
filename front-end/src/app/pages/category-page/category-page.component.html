@@ -1,0 +1,36 @@
+<app-header [isProductPage]="true"></app-header>
+<section>
+    <app-section-nav @slideIn></app-section-nav>
+
+    <div class="image" @slideIn>
+        <img #img [src]="category.imageUrl" [alt]="category.categoryName" />
+    </div>
+
+    <div class="description" @slideIn>
+        <span class="enterprise-name">AMPLAVISÃO</span>
+        <h2>{{ this.textFormatter.getCategoryNameParts(category.categoryName)[0] }}</h2>
+        <h2 class="model">{{ this.textFormatter.getCategoryNameParts(category.categoryName)[1] }}</h2>
+        <h3>DESCRIÇÃO</h3>
+
+        <div class="separator-button"></div>
+    </div>
+    <div class="buttons" @slideIn>
+        <app-announce-button (click)="this.scrollService.scrollToSection('budget-section')"></app-announce-button>
+        <app-whatsapp-button></app-whatsapp-button>
+    </div>
+</section>
+
+<div class="separator"></div>
+<div id="budget-section" class="section" @itemAnimation>
+    <div class="form-description">
+
+        <h1>Solicite um orçamento</h1>
+        <h2>Por favor preencha o formulário e entraremos em contato o mais breve possível</h2>
+    </div>
+
+    <app-budget-form [haveCategory]="true"></app-budget-form>
+
+
+</div>
+
+<app-footer></app-footer>
