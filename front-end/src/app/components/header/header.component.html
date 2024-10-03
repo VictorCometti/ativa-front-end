@@ -1,6 +1,4 @@
-<header>
-    <img [src]="headerIcon()"  alt="Logo">
-    <nav>
-        <app-header-options></app-header-options>
-    </nav>
+<header id="initial-section" class="section">
+    <img [src]="headerIcon()" alt="Logo">
+    <app-header-options [isProductPage]="isProductPage()"></app-header-options>
 </header>

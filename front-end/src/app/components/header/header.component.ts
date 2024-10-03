@@ -10,6 +10,7 @@ import { HeaderOptionsComponent } from "../header-options/header-options.compone
   
 })
 export class HeaderComponent {
-  public headerIcon = input<string>('https://amplasiteimages.s3.sa-east-1.amazonaws.com/logo.png');
+  public headerIcon = input<string>('./logo-sem-escrita.png');
+  public isProductPage = input.required<boolean>();
 
 }
