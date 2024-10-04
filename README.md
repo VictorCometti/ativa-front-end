@@ -1,6 +1,6 @@
-# Amplitec Website
+# Ativa Website
 
-Amplitec is a client project aimed at building a website to showcase the company's products and related services. The platform enables users to explore, request, and interact with the company's offerings through a well-structured and user-friendly interface.
+Ativa is a client project aimed at building a website to showcase the company's products and related services. The platform enables users to explore, request, and interact with the company's offerings through a well-structured and user-friendly interface.
 
 ## Table of Contents
 
@@ -14,9 +14,9 @@ Amplitec is a client project aimed at building a website to showcase the company
 
 ## Overview
 
-The **Amplitec Website** serves as a digital presence for the company, designed to display and promote its range of products and services. The project includes frontend and backend development, incorporating database structures for handling budgets, services, products, and users.
+The **Ativa Website** serves as a digital presence for the company, designed to display and promote its range of products and services. The project includes frontend and backend development, incorporating database structures for handling budgets, services, products, and users.
 
-![Amplitec - public](https://github.com/user-attachments/assets/f0e2f2ff-45a7-473d-95c7-cf0e100e1db1)
+![Ativa - public](https://github.com/user-attachments/assets/f0e2f2ff-45a7-473d-95c7-cf0e100e1db1)
 
 
 ## Database Modeling
